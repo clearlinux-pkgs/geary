@@ -1,29 +1,7 @@
-# Performance and debugging related options
-option('profiling', type: 'boolean', value: false)
-
-option('static', type: 'boolean', value: false,
-  description: 'Build as a static library'
-)
-
-option('introspection', type: 'feature', value: 'auto')
-option('vapi', type: 'boolean', value: true)
-
-# Subproject
-option('package_subdir', type: 'string',
-  description: 'Subdirectory to append to all installed files, for use as subproject'
-)
-
-option('gtk_doc',
-       type: 'boolean', value: false,
-       description: 'Whether to generate the API reference for Handy')
-
-option('tests',
-       type: 'boolean', value: true,
-       description: 'Whether to compile unit tests')
-
-option('examples',
-       type: 'boolean', value: true,
-       description: 'Build and install the examples and demo applications')
-
-option('glade_catalog', type: 'feature', value: 'auto',
-       description: 'Install a glade catalog file')
+option('valadoc', type: 'boolean', value: false, description: 'Whether to build the documentaton (requires valadoc).')
+option('contractor', type: 'boolean', value: false, description: 'Whether to install the contractor file (Elementary OS-specific).')
+option('poodle', type: 'boolean', value: true, description: 'Whether to apply the POODLE SSLv3 fix.')
+option('ref_tracking', type: 'boolean', value: false, description: 'Whether to use explicit reference tracking.')
+option('iso_639_xml', type: 'string', value: '', description: 'Full path to the ISO 639 XML file.')
+option('iso_3166_xml', type: 'string', value: '', description: 'Full path to the ISO 3166 XML file.')
+option('libunwind_optional', type: 'boolean', value: false, description: 'Determines if libunwind is required.')

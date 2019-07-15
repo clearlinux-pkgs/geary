@@ -1,53 +1,26 @@
-Version 3.33.1
+Version 3.32.1
 ~~~~~~~~~~~~~~
 Released: 2019-04-28
 
-"Better late than never"
-
-Enhancements included in this release:
- * Improved conversation performance
- * Add dependency on libhandy
- * Add IMAP and SMTP integration tests
- * Added support for TNEF attachments
- * Added Inspector window for real-time debugging
- * Updated symbolic images
- * Switched from libnotify to GNotify
- * Added support for TNEF attachments
- * Added support for application activation via DBus
- * Add Inspector for real-time debugging
- * Integrate desktop contacts into contacts popover
- * Update the user manual
- * Improved server compatibility
- * Numerous bug fixes and user interface improvements
- * Numerous user interface translation updates
-
 Thanks to all who contributed code fixes and enhancements to this
 release:
- * Christopher Davis
- * Greg V
  * Jiří Černý
- * Jonathan Haas
  * Kalev Lember
  * Konstantin Kharlamov
  * Niels De Graef
- * Oliver Giles
- * Rico Tzschichholz
- * Tobias Bernard
+
+Enhancements included in this release:
+ * Bug fixes and server compatibility improvements
+ * User interface translation updates
 
 Thanks also to all who contributed translations, for the user
 interface:
- * Anders Jonsson (sv)
- * Daniel Mustieles (es)
- * Daniel Șerbănescu (ro)
+ * Carles Ferrando Garcia (ca)
  * Federico Bruni (it)
- * Jiri Grönroos (fi)
- * Jordi Mas (ca)
  * Piotr Drąg (pl)
- * Rodrigo Lledó (es)
- * Tim Sabsch (de)
 
 And for the user manual:
- * Piotr Drąg (pl)
+ * Daniel Mustieles (es)
 
 Version 3.32
 ~~~~~~~~~~~~

@@ -1,9 +1,10 @@
-3.33.1
+3.32.1
 appstream-glib
 folks-dev
 gnome-online-accounts-dev
 json-glib-dev
 libhandy-dev
+libnotify-dev
 pkgconfig(enchant-2)
 pkgconfig(folks)
 pkgconfig(gck-1)
@@ -13,6 +14,7 @@ pkgconfig(iso-codes)
 pkgconfig(json-glib-1.0)
 pkgconfig(libcanberra)
 pkgconfig(libhandy-0.0)
+pkgconfig(libnotify)
 pkgconfig(libunwind)
 pkgconfig(libytnef)
 pkgconfig(messaging-menu)
