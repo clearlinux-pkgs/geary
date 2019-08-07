@@ -4,7 +4,7 @@
 #
 Name     : geary
 Version  : 3.32.2
-Release  : 3
+Release  : 4
 URL      : https://download.gnome.org/sources/geary/3.32/geary-3.32.2.tar.xz
 Source0  : https://download.gnome.org/sources/geary/3.32/geary-3.32.2.tar.xz
 Summary  : A lightweight email client for the GNOME desktop
@@ -21,6 +21,7 @@ BuildRequires : buildreq-meson
 BuildRequires : folks-dev
 BuildRequires : gnome-online-accounts-dev
 BuildRequires : json-glib-dev
+BuildRequires : libhandy-dev
 BuildRequires : libnotify-dev
 BuildRequires : pkgconfig(enchant-2)
 BuildRequires : pkgconfig(folks)
@@ -30,8 +31,10 @@ BuildRequires : pkgconfig(goa-1.0)
 BuildRequires : pkgconfig(iso-codes)
 BuildRequires : pkgconfig(json-glib-1.0)
 BuildRequires : pkgconfig(libcanberra)
+BuildRequires : pkgconfig(libhandy-0.0)
 BuildRequires : pkgconfig(libnotify)
 BuildRequires : pkgconfig(libunwind)
+BuildRequires : pkgconfig(libytnef)
 BuildRequires : pkgconfig(sqlite3)
 BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : sqlite-autoconf-dev
@@ -105,7 +108,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565190835
+export SOURCE_DATE_EPOCH=1565193482
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
