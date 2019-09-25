@@ -1,40 +1,188 @@
-Version 3.32.2
+Version 3.34.0
 ~~~~~~~~~~~~~~
-Released: 2019-08-04
+Released: 2019-09-21
 
 Enhancements included in this release:
- * Bug fixes and server compatibility improvements
- * User interface translation updates
-
-Thanks to all who contributed translations for the user interface:
-
- * Bruce Cowan (en_GB)
- * Tim Sabsch (de)
- * Yuras Shumovich (be)
-
-Version 3.32.1
-~~~~~~~~~~~~~~
-Released: 2019-04-28
+ * Improved desktop contact integration
+ * Added support for TNEF attachments
+ * User interface and icon refinements
+ * Subject line now also spell checked in the composer
+ * Updated user manual
+ * Improved problem reporting tool
+ * New Inspector window for real-time debugging
+ * Improved server compatibility
+ * Numerous bug fixes and user interface improvements
+ * Numerous user interface translation updates
 
 Thanks to all who contributed code fixes and enhancements to this
 release:
+ * Alex Henrie
+ * Christopher Davis
+ * Claudio
+ * Federico Bruni
+ * Greg V
  * Jiří Černý
- * Kalev Lember
+ * Joe Barnett
+ * Jonathan Haas
+ * Jon Banafato
+ * Khurshid Alam
  * Konstantin Kharlamov
+ * Mario Ravalli
+ * Mete Can Eris
  * Niels De Graef
-
-Enhancements included in this release:
- * Bug fixes and server compatibility improvements
- * User interface translation updates
+ * Oliver Giles
+ * Rafael Fontenelle
+ * Rico Tzschichholz
+ * Tobias Bernard
 
 Thanks also to all who contributed translations, for the user
 interface:
- * Carles Ferrando Garcia (ca)
+ * Anders Jonsson (sv)
+ * Balázs Úr (hu)
+ * Bruce Cowan (en_GB)
+ * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
+ * Efstathios Iosifidis (el)
+ * Emin Tufan Çetin (tr)
+ * Enrico Nicoletto (pt_BR)
  * Federico Bruni (it)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Marek Černocký (cs)
  * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * Rodrigo Lledó (es)
+ * Ryuta Fujii (ja)
+ * Tim Sabsch (de)
+ * Zander Brown (en_GB)
 
 And for the user manual:
+ * Anders Jonsson (sv)
+ * Emin Tufan Çetin (tr)
+ * Federico Bruni (it)
+ * Marek Černocký (cs)
+ * Piotr Drąg (pl)
+
+Version 3.33.91
+~~~~~~~~~~~~~~~
+Released: 2019-09-11
+
+Bugs fixed:
+ * Background sync being cancelled on folder close
+ * Retry IMAP pool connections on GLib "Unknown error on connect"
+ * Temporarily replace WebKitGTK process model API with env var
+ * Conditionally enable WebKitGTK shared secondary process model
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Anders Jonsson (sv)
+ * Efstathios Iosifidis (el)
+ * Rafael Fontenelle (pt_BR)
+ * Ryuta Fujii (ja)
+ * Zander Brown (en_GB)
+
+And for the user manual:
+ * Anders Jonsson (sv)
+
+
+Version 3.33.90
+~~~~~~~~~~~~~~~
+Released: 2019-08-30
+
+Enhancements included in this release:
+ * Sent email is now immediately added to a conversation
+ * Loading large search results now much more smooth
+ * Background synchronisation reliability greatly improved
+ * Messages can be replied to via by a different account
+ * Added a number of keyboard shortcuts for common operations
+ * Support for Development and Beta build profiles
+ * Bug causing Geary to use 100% CPU fixed
+ * Numerous bug fixes and user interface improvements
+ * Numerous user interface translation updates
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Alex Henrie
+ * Christopher Davis
+ * Federico Bruni
+ * Jiří Černý
+ * Joe Barnett
+ * Jon Banafato
+ * Khurshid Alam
+ * Konstantin Kharlamov
+ * Mario Ravalli
+ * Mete Can Eris
+ * Rafael Fontenelle
+ * Rico Tzschichholz
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Bruce Cowan (en_GB)
  * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
+ * Emin Tufan Çetin (tr)
+ * Enrico Nicoletto (pt_BR)
+ * Federico Bruni (it)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * Rodrigo Lledó (es)
+
+And for the user manual:
+ * Emin Tufan Çetin (tr)
+ * Federico Bruni (it)
+
+Version 3.33.1
+~~~~~~~~~~~~~~
+Released: 2019-04-28
+
+"Better late than never"
+
+Enhancements included in this release:
+ * Improved conversation performance
+ * Add dependency on libhandy
+ * Add IMAP and SMTP integration tests
+ * Added support for TNEF attachments
+ * Added Inspector window for real-time debugging
+ * Updated symbolic images
+ * Switched from libnotify to GNotify
+ * Added support for TNEF attachments
+ * Added support for application activation via DBus
+ * Add Inspector for real-time debugging
+ * Integrate desktop contacts into contacts popover
+ * Update the user manual
+ * Improved server compatibility
+ * Numerous bug fixes and user interface improvements
+ * Numerous user interface translation updates
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Christopher Davis
+ * Greg V
+ * Jiří Černý
+ * Jonathan Haas
+ * Kalev Lember
+ * Konstantin Kharlamov
+ * Niels De Graef
+ * Oliver Giles
+ * Rico Tzschichholz
+ * Tobias Bernard
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Anders Jonsson (sv)
+ * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
+ * Federico Bruni (it)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Piotr Drąg (pl)
+ * Rodrigo Lledó (es)
+ * Tim Sabsch (de)
+
+And for the user manual:
+ * Piotr Drąg (pl)
 
 Version 3.32
 ~~~~~~~~~~~~
