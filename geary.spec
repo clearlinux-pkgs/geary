@@ -4,7 +4,7 @@
 #
 Name     : geary
 Version  : 3.34.2
-Release  : 8
+Release  : 9
 URL      : https://download.gnome.org/sources/geary/3.34/geary-3.34.2.tar.xz
 Source0  : https://download.gnome.org/sources/geary/3.34/geary-3.34.2.tar.xz
 Summary  : A library full of GTK+ widgets for mobile phones
