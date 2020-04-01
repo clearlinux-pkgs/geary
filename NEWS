@@ -1,114 +1,208 @@
-Version 3.34.2
+Version 3.36.1
 ~~~~~~~~~~~~~~
-Released: 2019-11-24
+Released: 2020-03-29
 
 Enhancements included in this release:
-
- * Bug fixes and server compatibility improvements
- * User interface translation updates
-
-See <https://gitlab.gnome.org/GNOME/geary/-/milestones/14> for full
-details.
-
-Thanks to all who contributed code fixes and enhancements to this
-release:
-
- * Mario Ravalli <mario@raval.li>
- * Alex Henrie <alexhenrie24@gmail.com>
-
-Thanks also to all who contributed translations, for the user
-interface:
-
- * Asier Sarasua Garmendia (eu)
-
-And for the user manual:
- * Daniel Mustieles (es)
-
-
-Version 3.34.1
-~~~~~~~~~~~~~~
-Released: 2019-10-07
-
-Enhancements included in this release:
- * Fix conversation and composer colours under dark themes
- * Fixes for link editing in rich text mode
- * Fix drafts being left over in Gmail
- * Fix application not exiting on quit
- * Fix crash when sending certain emails
- * User interface translation updates
-
-Thanks to all who contributed code fixes and enhancements to this
-release:
-
- * Alex Henrie
-
-Thanks also to all who contributed translations, for the user
-interface:
- * Asier Sarasua Garmendia (eu)
- * Marek Černocký (cs)
-
-Version 3.34.0
-~~~~~~~~~~~~~~
-Released: 2019-09-21
-
-Enhancements included in this release:
- * Improved desktop contact integration
- * Added support for TNEF attachments
- * User interface and icon refinements
- * Subject line now also spell checked in the composer
- * Updated user manual
- * Improved problem reporting tool
- * New Inspector window for real-time debugging
- * Improved server compatibility
  * Numerous bug fixes and user interface improvements
  * Numerous user interface translation updates
 
 Thanks to all who contributed code fixes and enhancements to this
 release:
- * Alex Henrie
- * Christopher Davis
- * Claudio
- * Federico Bruni
- * Greg V
- * Jiří Černý
- * Joe Barnett
- * Jonathan Haas
- * Jon Banafato
- * Khurshid Alam
- * Konstantin Kharlamov
- * Mario Ravalli
- * Mete Can Eris
- * Niels De Graef
- * Oliver Giles
- * Rafael Fontenelle
- * Rico Tzschichholz
- * Tobias Bernard
+ * Daniel Kahn Gillmor
+ * James Westman
+ * Jonatan Pålsson
 
 Thanks also to all who contributed translations, for the user
 interface:
  * Anders Jonsson (sv)
- * Balázs Úr (hu)
- * Bruce Cowan (en_GB)
+ * Jordi Mas (ca)
+
+And for the user manual:
+ * Jordi Mas (ca)
+
+Version 3.36
+~~~~~~~~~~~~
+Released: 2020-03-13
+
+Enhancements included in this release:
+ * New and improved responsive composer interface
+ * Drag and drop image files into rich text messages
+ * Paste images from the clipboard into rich text messages
+ * Improved composer missing attachment detection
+ * Access emoji chooser in composer via shortcut or context menu
+ * Extend undo for email actions such as archiving, marking
+ * Undo sending, saving and discarding composed email
+ * Undo editing in text fields, including in the composer
+ * Open more than one main window
+ * New and improved responsive preferences interface
+ * Using single key shortcuts for email actions is now optional
+ * Single key shortcuts have been brought up to date with Gmail
+ * App-wide notification preferences now handled by desktop
+ * Numerous bug fixes and user interface improvements
+ * Numerous user interface translation updates
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Adam Dingle
+ * Adrien Plazas
+ * Alex Henrie
+ * Bilal Elmoussaoui
+ * Chris Heywood
+ * Daniel Kahn Gillmor
+ * James Westman
+ * João Loureiro
+ * Konstantin Kharlamov
+ * Mario Ravalli
+ * Mart Raudsepp
+ * Niels De Graef
+ * Tobias Sette
+ * Torben
+ * Алексей Шилин
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Alexandre Franke (fr)
+ * Anders Jonsson (sv)
+ * Andika Triwidada (id)
+ * Asier Sarasua Garmendia (eu)
+ * Balázs Meskó (hu)
+ * Cheng-Chia Tseng (zh_TW)
  * Daniel Mustieles (es)
- * Daniel Șerbănescu (ro)
- * Efstathios Iosifidis (el)
  * Emin Tufan Çetin (tr)
  * Enrico Nicoletto (pt_BR)
  * Federico Bruni (it)
  * Jiri Grönroos (fi)
  * Jordi Mas (ca)
+ * Kukuh Syafaat (id)
  * Marek Černocký (cs)
+ * Nathan Follens (nl)
  * Piotr Drąg (pl)
  * Rafael Fontenelle (pt_BR)
- * Rodrigo Lledó (es)
- * Ryuta Fujii (ja)
+ * sicklylife (ja)
  * Tim Sabsch (de)
- * Zander Brown (en_GB)
 
 And for the user manual:
- * Anders Jonsson (sv)
+ * Daniel Mustieles (es)
  * Emin Tufan Çetin (tr)
  * Federico Bruni (it)
+ * Marek Černocký (cs)
+ * Piotr Drąg (pl)
+
+Version 3.35.90
+~~~~~~~~~~~~~~~
+Released: 2020-03-01
+
+Changes:
+
+ * Support drag and drop and copy and paste images in composer
+ * Updated composer UI to new responsive design
+ * Updated preferences UI to use Handy widgets
+ * Add hidden prefs for minimising in-app notifications
+ * Ported engine to to GMime 3.x
+ * Update WebKitGTK minimum version to 2.26
+ * Drop libunity dependency in favour of internal implementation
+ * Several bug fixes and code cleanups
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Adam Dingle
+ * Adrien Plazas
+ * Chris Heywood
+ * James Westman
+ * Konstantin Kharlamov
+ * Mart Raudsepp
+ * Niels De Graef
+ * Tobias Sette
+ * Алексей Шилин
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Alexandre Franke (fr)
+ * Anders Jonsson (sv)
+ * Andika Triwidada (id)
+ * Daniel Mustieles (es)
+ * Emin Tufan Çetin (tr)
+ * Enrico Nicoletto (pt_BR)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Kukuh Syafaat (id)
+ * Nathan Follens (nl)
+ * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * sicklylife (ja)
+
+And for the user manual:
+ * Daniel Mustieles (es)
+ * Piotr Drąg (pl)
+
+Version 3.35.2
+~~~~~~~~~~~~~~~
+Released: 2019-10-11
+
+Changes:
+ * Roll up bugs fixed in 3.34.2
+ * Add drag and drop and paste images into rich text messages
+ * Add account-wide undo of email actions
+ * Add undo composer send/save/discard
+ * Add undo for GtkEntry widgets
+ * Support opening multiple main windows
+ * Update and improve keyboard shortcuts
+ * Make single-key shortcuts optional, brig up to date with Gmail
+ * Substantial client application/controller/main window/composer class
+   cleanup
+ * Geary.Engine API cleanup
+ * Improve logging intialisation
+ * Online manual updates
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Alex Henrie
+ * Chris Heywood
+ * Mario Ravalli
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Asier Sarasua Garmendia (eu)
+ * Daniel Mustieles (es)
+ * Emin Tufan Çetin (tr)
+ * Jordi Mas (ca)
+ * Piotr Drąg (pl)
+
+And for the user manual:
+ * Daniel Mustieles (es)
+ * Emin Tufan Çetin (tr)
+
+Version 3.35.1
+~~~~~~~~~~~~~~~
+Released: 2019-10-11
+
+Changes:
+ * Improved missing attachment detection in composer
+ * App-wide notification preferences now handled by desktop
+ * Initial plugin system
+ * Rename development app id to org.gnome.Geary.Devel
+ * Publish nightly devel Flatpak builds to nightly.gnome.org
+ * Tighten Flatpak sandbox permissions
+ * Convert Flatpak manifest to YML
+ * Roll up bugs fixed in 3.34.1
+ * Add libpeas dependency
+ * Drop libcanberra dependency
+ * Update meson dependency to >= 0.50
+ * Misc bug fixes and code cleanup
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Alex Henrie
+ * Bilal Elmoussaoui
+ * João Loureiro
+ * Konstantin Kharlamov
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Asier Sarasua Garmendia (eu)
+ * Marek Černocký (cs)
+
+And for the user manual:
  * Marek Černocký (cs)
  * Piotr Drąg (pl)
 

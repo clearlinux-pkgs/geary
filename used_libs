@@ -1,6 +1,5 @@
 libc.so.6
 libcairo.so.2
-libcanberra.so.0
 libenchant-2.so.2
 libfolks.so.25
 libgck-1.so.0
@@ -10,7 +9,7 @@ libgdk_pixbuf-2.0.so.0
 libgee-0.8.so.2
 libgio-2.0.so.0
 libglib-2.0.so.0
-libgmime-2.6.so.0
+libgmime-3.0.so.0
 libgoa-1.0.so.0
 libgobject-2.0.so.0
 libgspell-1.so.2
@@ -21,6 +20,8 @@ libjson-glib-1.0.so.0
 libm.so.6
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
+libpeas-1.0.so.0
+libpthread.so.0
 libsecret-1.so.0
 libsoup-2.4.so.1
 libsqlite3.so.0
