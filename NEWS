@@ -1,70 +1,234 @@
-Version 3.36.3[.1]
-~~~~~~~~~~~~~~~~~~
-Released: 2020-08-27
+Version 3.38
+~~~~~~~~~~~~
+Released: 2020-09-13
 
 Enhancements included in this release:
- * Fixed handling of pinned, invalid TLS certificates: CVE-2020-24661
- * Build bug fixes
+ * Clean up email in database older than the storage preference
+ * New Preferences window pane for managing plugins
+ * New Email Templates plugin
+ * New Mail Merge plugin
+ * New Sent Sound plugin
+ * New Unity Messaging Menu plugin
+ * Reduced number of spurious problem report info bars
+ * Improved ordering of folders in the folder list
+ * Spam folder renamed to Junk
+ * Composer formatting toolbar initially hidden for new installs
+ * Desktop mail notifications now show contact photos
+ * Improved server compatibility
+ * Numerous bug fixes and user interface improvements
+ * Numerous user interface translation updates
 
-Thanks to all who contributed code fixes and enhancements to this
+Thanks to those who contributed code fixes and enhancements to this
 release:
+ * Adwait Rawat
+ * Andres Salomon
+ * Björn Daase
+ * Chris Heywood
+ * Daniel Kahn Gillmor
+ * Diego Escalante Urrelo
+ * Federico Bruni
+ * Guillaume Ayoub
+ * hkdb
+ * James Westman
+ * Jan Tojnar
+ * Jonatan Pålsson
  * Jordan Petridis
+ * Oliver Giles
  * Rico Tzschichholz
- * Vanadiae
+ * Thibault Martin
 
-Thanks also to all who contributed translations, for the user
+Thanks also to all who contributed translations for the user
 interface:
+ * Anders Jonsson (sv)
+ * Andika Triwidada (id)
+ * Asier Sarasua Garmendia (eu)
+ * Ask Hjorth Larsen (da)
+ * Baurzhan Muftakhidinov (kk)
+ * Bruce Cowan (en_GB)
+ * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
  * Dušan Kazik (sk)
+ * Efstathios Iosifidis (el)
+ * Emin Tufan Çetin (tr)
+ * Enrico Nicoletto (pt_BR)
+ * Fabio Tomat (fur)
+ * Federico Bruni (it)
+ * Goran Vidović (hr)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Kukuh Syafaat (id)
+ * Nathan Follens (nl)
+ * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * sicklylife (ja)
  * Thibault Martin (fr)
+ * Yuri Chornoivan (uk)
 
 And for the user manual:
+ * Andre Klapper (it)
+ * Jordi Mas (ca)
  * Piotr Drąg (pl)
  * Yuri Chornoivan (uk)
 
-Version 3.36.2
-~~~~~~~~~~~~~~
-Released: 2020-05-03
+Version 3.37.92
+~~~~~~~~~~~~~~~
+Released: 2020-09-06
 
-Enhancements included in this release:
- * Client library now installed to private lib sub-directory
- * Allow downstream packagers set their package's version nuber
- * Numerous bug fixes and user interface improvements
- * Numerous user interface translation updates
+Notable changes included in this release:
+
+ * Fix for crash in conversation find
+ * Fix GOA-related app freeze at startup
+ * Fix for infinite "recoverable error" loop
+ * Fix for database locking errors
+ * Fixes for handling cancelled IMAP commands
+ * Various bug fixes and user interface improvements
 
 Thanks to all who contributed code fixes and enhancements to this
 release:
- * Daniel Kahn Gillmor
+ * Chris Heywood
 
 Thanks also to all who contributed translations, for the user
 interface:
- * Asier Sarasua Garmendia (eu)
- * Dušan Kazik (sk)
- * Efstathios Iosifidis (el)
- * Goran Vidović (hr)
- * Jordi Mas (ca)
+ * Bruce Cowan (en_GB)
+ * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
+ * Emin Tufan Çetin (tr)
+ * Enrico Nicoletto (pt_BR)
+ * Federico Bruni (it)
+ * Jiri Grönroos (fi)
+ * Kukuh Syafaat (id)
+ * Nathan Follens (nl)
+ * Piotr Drąg (pl)
+ * sicklylife (ja)
+ * Thibault Martin (fr)
  * Yuri Chornoivan (uk)
 
-And for the user manual:
- * Jordi Mas (ca)
+Version 3.37.91
+~~~~~~~~~~~~~~~
+Released: 2020-08-27
 
-Version 3.36.1
-~~~~~~~~~~~~~~
-Released: 2020-03-29
+Notable changes included in this release:
 
-Enhancements included in this release:
- * Numerous bug fixes and user interface improvements
- * Numerous user interface translation updates
+ * Fixed handling of pinned, invalid TLS certificates: CVE-2020-24661
+ * Removed libhandy subproject due to translation infrastructure issue
+ * Update vala dependency to >= 0.48.6
+ * Update glib dependency to >= 2.64
+ * Various bug fixes and user interface improvements
+ * various user interface translation updates
 
 Thanks to all who contributed code fixes and enhancements to this
 release:
- * Daniel Kahn Gillmor
- * James Westman
- * Jonatan Pålsson
+ * Björn Daase
+ * Chris Heywood
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Daniel Mustieles (es)
+ * Piotr Drąg (pl)
+
+Version 3.37.90
+~~~~~~~~~~~~~~
+Released: 2020-08-19
+
+Notable changes included in this release:
+
+ * Drop messages in the database older than the storage preference
+ * Added a mail merge plugin
+ * Sent sound plugin improvements
+ * Follow system font preference in the conversation list
+ * Hide composer formatting toolbar by default
+ * Improved default preferences window size
+ * Improved server compatibility
+ * Code cleanup, build and bug fixes
+ * Broke out generic unit test code into a stand-alone subproject
+ * Use a distinct icon for nightly builds
+ * Update vala dependency to >= 0.46.2
+ * Update libhandy dependency to >= 0.90
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Adwait Rawat
+ * Andres Salomon
+ * Chris Heywood
+ * Diego Escalante Urrelo
+ * Federico Bruni
+ * Guillaume Ayoub
+ * hkdb
+ * Jan Tojnar
+ * Jordan Petridis
+ * Oliver Giles
+ * Rico Tzschichholz
+ * Thibault Martin
 
 Thanks also to all who contributed translations, for the user
 interface:
  * Anders Jonsson (sv)
+ * Baurzhan Muftakhidinov (kk)
+ * Daniel Mustieles (es)
+ * Daniel Șerbănescu (ro)
+ * Dušan Kazik (sk)
+ * Emin Tufan Çetin (tr)
+ * Federico Bruni (it)
  * Jordi Mas (ca)
+ * Kukuh Syafaat (id)
+ * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * sicklylife (ja)
+ * Thibault Martin (fr)
+ * Yuri Chornoivan (uk)
+
+And for the user manual:
+ * Andre Klapper (it)
+ * Jordi Mas (ca)
+ * Piotr Drąg (pl)
+ * Yuri Chornoivan (uk)
+
+Version 3.37.1
+~~~~~~~~~~~~~~
+Released: 2020-05-03
+
+Notable changes included in this release:
+
+ * Add support for email and folder plugins
+ * Add preferences for loading optional plugins
+ * Add new Sent Sound and Email Template optional plugins
+ * Convert Unity Messaging Menu plugin to be optional
+ * Convert more non-core code to internal plugins
+ * Reduce and limit the number of problem reports displayed
+ * Fix ordering of folders in the folder list
+ * Rename Spam folder to Junk
+ * Use info bars for emptying Trash and Junk folders
+ * Allow enabling/disabling logging domains from the Inspector
+ * Improvements to IMAP stack reliability
+ * Prefer IMAP SPECIAL USE extenion over XLIST
+ * Numerous client and engine bug fixes and code clean up
+ * Added a build dependency for the GSOund library
+
+Thanks to all who contributed code fixes and enhancements to this
+release:
+ * Björn Daase
+ * Daniel Kahn Gillmor
+ * James Westman
+ * Jonatan Pålsson
+ * Rico Tzschichholz
+
+Thanks also to all who contributed translations, for the user
+interface:
+ * Anders Jonsson (sv)
+ * Andika Triwidada (id)
+ * Asier Sarasua Garmendia (eu)
+ * Ask Hjorth Larsen (da)
+ * Daniel Mustieles (es)
+ * Dušan Kazik (sk)
+ * Efstathios Iosifidis (el)
+ * Emin Tufan Çetin (tr)
+ * Goran Vidović (hr)
+ * Jiri Grönroos (fi)
+ * Jordi Mas (ca)
+ * Piotr Drąg (pl)
+ * Rafael Fontenelle (pt_BR)
+ * sicklylife (ja)
+ * Yuri Chornoivan (uk)
 
 And for the user manual:
  * Jordi Mas (ca)
@@ -200,7 +364,7 @@ Changes:
  * Substantial client application/controller/main window/composer class
    cleanup
  * Geary.Engine API cleanup
- * Improve logging intialisation
+ * Improve logging initialisation
  * Online manual updates
 
 Thanks to all who contributed code fixes and enhancements to this
