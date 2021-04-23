@@ -1,2 +1,17 @@
 # This file contains additional pkgconfig build requirements that did
 # not get picked up automatically. One name per line, no whitespace.
+appstream-glib
+enchant-2
+folks
+gck-1
+gmime-3.0
+goa-1.0
+gsound
+gspell-1
+iso-codes
+json-glib-1.0
+libhandy-1
+libpeas-1.0
+libunwind
+sqlite3
+webkit2gtk-4.0

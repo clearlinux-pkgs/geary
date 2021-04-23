@@ -1,26 +1,4 @@
 # This file contains additional build requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-folks-dev
-gnome-online-accounts-dev
-gsound-dev
-gspell-dev
-json-glib-dev
-libpeas-dev
-pkgconfig(appstream-glib)
-pkgconfig(enchant-2)
-pkgconfig(folks)
-pkgconfig(gck-1)
-pkgconfig(gmime-3.0)
-pkgconfig(goa-1.0)
-pkgconfig(gsound)
-pkgconfig(gspell-1)
-pkgconfig(iso-codes)
-pkgconfig(json-glib-1.0)
-pkgconfig(libhandy-1)
-pkgconfig(libpeas-1.0)
-pkgconfig(libunwind)
-pkgconfig(sqlite3)
-pkgconfig(webkit2gtk-4.0)
-sqlite-autoconf-dev
-webkitgtk-dev
+libstemmer_c-dev
 ytnef-dev
