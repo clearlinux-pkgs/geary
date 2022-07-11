@@ -4,7 +4,7 @@
 #
 Name     : geary
 Version  : 40.0
-Release  : 17
+Release  : 18
 URL      : https://download.gnome.org/sources/geary/40/geary-40.0.tar.xz
 Source0  : https://download.gnome.org/sources/geary/40/geary-40.0.tar.xz
 Summary  : No detailed summary available
