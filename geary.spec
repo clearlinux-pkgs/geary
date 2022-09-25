@@ -4,7 +4,7 @@
 #
 Name     : geary
 Version  : 40.0
-Release  : 21
+Release  : 22
 URL      : https://download.gnome.org/sources/geary/40/geary-40.0.tar.xz
 Source0  : https://download.gnome.org/sources/geary/40/geary-40.0.tar.xz
 Summary  : No detailed summary available
@@ -105,7 +105,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1664077444
+export SOURCE_DATE_EPOCH=1664144915
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -126,10 +126,10 @@ meson test -C builddir --print-errorlogs || :
 
 %install
 mkdir -p %{buildroot}/usr/share/package-licenses/geary
-cp %{_builddir}/geary-%{version}/COPYING %{buildroot}/usr/share/package-licenses/geary/bef3bc6935e2bf6b3a78ce0d73b13cac7522b62c
-cp %{_builddir}/geary-%{version}/COPYING.icons %{buildroot}/usr/share/package-licenses/geary/69f06a48b814026a77752db9908bca89c342ea89
-cp %{_builddir}/geary-%{version}/COPYING.pyyaml %{buildroot}/usr/share/package-licenses/geary/02f4ee02272b590193abf6302151a54e3055f503
-cp %{_builddir}/geary-%{version}/subprojects/vala-unit/COPYING %{buildroot}/usr/share/package-licenses/geary/bef3bc6935e2bf6b3a78ce0d73b13cac7522b62c
+cp %{_builddir}/geary-%{version}/COPYING %{buildroot}/usr/share/package-licenses/geary/bef3bc6935e2bf6b3a78ce0d73b13cac7522b62c || :
+cp %{_builddir}/geary-%{version}/COPYING.icons %{buildroot}/usr/share/package-licenses/geary/69f06a48b814026a77752db9908bca89c342ea89 || :
+cp %{_builddir}/geary-%{version}/COPYING.pyyaml %{buildroot}/usr/share/package-licenses/geary/02f4ee02272b590193abf6302151a54e3055f503 || :
+cp %{_builddir}/geary-%{version}/subprojects/vala-unit/COPYING %{buildroot}/usr/share/package-licenses/geary/bef3bc6935e2bf6b3a78ce0d73b13cac7522b62c || :
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang geary
 
