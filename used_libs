@@ -2,7 +2,7 @@ libatk-1.0.so.0
 libc.so.6
 libcairo.so.2
 libenchant-2.so.2
-libfolks.so.25
+libfolks.so.26
 libgck-1.so.0
 libgcr-base-3.so.1
 libgdk-3.so.0
@@ -17,14 +17,13 @@ libgsound.so.0
 libgspell-1.so.2
 libgtk-3.so.0
 libhandy-1.so.0
-libicuuc.so.67
+libicuuc.so.70
 libjavascriptcoregtk-4.0.so.18
 libjson-glib-1.0.so.0
 libm.so.6
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpeas-1.0.so.0
-libpthread.so.0
 libsecret-1.so.0
 libsoup-2.4.so.1
 libsqlite3.so.0
