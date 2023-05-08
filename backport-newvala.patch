@@ -1,0 +1,50 @@
+commit 4a7ca820b1d3d6130fedf254dc5b4cd7efb58f2c
+Author: Rico Tzschichholz <ricotz@ubuntu.com>
+Date:   Sat Apr 8 13:06:50 2023 +0200
+
+    client: Add missing type-arguments for interfaces to fix build with newer vala
+
+diff --git a/src/client/accounts/accounts-editor-row.vala b/src/client/accounts/accounts-editor-row.vala
+index 6e7ac2ab..70223d71 100644
+--- a/src/client/accounts/accounts-editor-row.vala
++++ b/src/client/accounts/accounts-editor-row.vala
+@@ -386,7 +386,7 @@ private abstract class Accounts.ServiceRow<PaneType,V> : AccountRow<PaneType,V>
+ 
+ 
+ /** Interface for rows that use a validator for editable values. */
+-internal interface Accounts.ValidatingRow : EditorRow {
++internal interface Accounts.ValidatingRow<PaneType> : EditorRow<PaneType> {
+ 
+ 
+     /** The row's validator */
+diff --git a/src/client/accounts/accounts-editor-servers-pane.vala b/src/client/accounts/accounts-editor-servers-pane.vala
+index 8bd9bde1..982acd5c 100644
+--- a/src/client/accounts/accounts-editor-servers-pane.vala
++++ b/src/client/accounts/accounts-editor-servers-pane.vala
+@@ -694,7 +694,7 @@ private class Accounts.SaveSentRow :
+ 
+ 
+ private class Accounts.ServiceHostRow :
+-    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow {
++    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow<EditorServersPane> {
+ 
+ 
+     public Components.Validator validator {
+@@ -848,7 +848,7 @@ private class Accounts.ServiceSecurityRow :
+ 
+ 
+ private class Accounts.ServiceLoginRow :
+-    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow {
++    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow<EditorServersPane> {
+ 
+ 
+     public Components.Validator validator {
+@@ -972,7 +972,7 @@ private class Accounts.ServiceLoginRow :
+ 
+ 
+ private class Accounts.ServicePasswordRow :
+-    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow {
++    ServiceRow<EditorServersPane,Gtk.Entry>, ValidatingRow<EditorServersPane> {
+ 
+ 
+     public Components.Validator validator {

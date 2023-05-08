@@ -5,7 +5,7 @@
 #
 Name     : geary
 Version  : 43.0
-Release  : 24
+Release  : 25
 URL      : https://download.gnome.org/sources/geary/43/geary-43.0.tar.xz
 Source0  : https://download.gnome.org/sources/geary/43/geary-43.0.tar.xz
 Summary  : No detailed summary available
@@ -33,12 +33,12 @@ BuildRequires : pkgconfig(libhandy-1)
 BuildRequires : pkgconfig(libpeas-1.0)
 BuildRequires : pkgconfig(libunwind)
 BuildRequires : pkgconfig(sqlite3)
-BuildRequires : pkgconfig(webkit2gtk-4.0)
 BuildRequires : pkgconfig(webkit2gtk-4.1)
 BuildRequires : ytnef-dev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
+Patch1: backport-newvala.patch
 
 %description
 Geary: Send and receive email
@@ -100,23 +100,29 @@ locales components for the geary package.
 %prep
 %setup -q -n geary-43.0
 cd %{_builddir}/geary-43.0
+%patch1 -p1
+pushd ..
+cp -a geary-43.0 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680024024
+export SOURCE_DATE_EPOCH=1683557812
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dprofile=release  builddir
 ninja -v -C builddir
+CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -O3" CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 " LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3" meson --libdir=lib64 --prefix=/usr --buildtype=plain -Dprofile=release  builddiravx2
+ninja -v -C builddiravx2
 
 %check
 export LANG=C.UTF-8
@@ -131,8 +137,10 @@ cp %{_builddir}/geary-%{version}/COPYING %{buildroot}/usr/share/package-licenses
 cp %{_builddir}/geary-%{version}/COPYING.icons %{buildroot}/usr/share/package-licenses/geary/69f06a48b814026a77752db9908bca89c342ea89 || :
 cp %{_builddir}/geary-%{version}/COPYING.pyyaml %{buildroot}/usr/share/package-licenses/geary/02f4ee02272b590193abf6302151a54e3055f503 || :
 cp %{_builddir}/geary-%{version}/subprojects/vala-unit/COPYING %{buildroot}/usr/share/package-licenses/geary/bef3bc6935e2bf6b3a78ce0d73b13cac7522b62c || :
+DESTDIR=%{buildroot}-v3 ninja -C builddiravx2 install
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang geary
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -146,6 +154,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files bin
 %defattr(-,root,root,-)
+/V3/usr/bin/geary
 /usr/bin/geary
 
 %files data
@@ -424,6 +433,15 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files lib
 %defattr(-,root,root,-)
+/V3/usr/lib64/geary/libgeary-client-43.0.so
+/V3/usr/lib64/geary/plugins/desktop-notifications/libdesktop-notifications.so
+/V3/usr/lib64/geary/plugins/email-templates/libemail-templates.so
+/V3/usr/lib64/geary/plugins/folder-highlight/libfolder-highlight.so
+/V3/usr/lib64/geary/plugins/mail-merge/libmail-merge.so
+/V3/usr/lib64/geary/plugins/notification-badge/libnotification-badge.so
+/V3/usr/lib64/geary/plugins/sent-sound/libsent-sound.so
+/V3/usr/lib64/geary/plugins/special-folders/libspecial-folders.so
+/V3/usr/lib64/geary/web-extensions/libgeary-web-process.so
 /usr/lib64/geary/libgeary-client-43.0.so
 /usr/lib64/geary/plugins/desktop-notifications/libdesktop-notifications.so
 /usr/lib64/geary/plugins/email-templates/libemail-templates.so
