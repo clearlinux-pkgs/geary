@@ -4,10 +4,10 @@
 # Using build pattern: meson
 #
 Name     : geary
-Version  : 43.0
-Release  : 26
-URL      : https://download.gnome.org/sources/geary/43/geary-43.0.tar.xz
-Source0  : https://download.gnome.org/sources/geary/43/geary-43.0.tar.xz
+Version  : 44.0
+Release  : 27
+URL      : https://download.gnome.org/sources/geary/44/geary-44.0.tar.xz
+Source0  : https://download.gnome.org/sources/geary/44/geary-44.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC-BY-SA-3.0 LGPL-2.1 MIT
@@ -38,7 +38,6 @@ BuildRequires : ytnef-dev
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-Patch1: backport-newvala.patch
 
 %description
 Geary: Send and receive email
@@ -98,11 +97,10 @@ locales components for the geary package.
 
 
 %prep
-%setup -q -n geary-43.0
-cd %{_builddir}/geary-43.0
-%patch1 -p1
+%setup -q -n geary-44.0
+cd %{_builddir}/geary-44.0
 pushd ..
-cp -a geary-43.0 buildavx2
+cp -a geary-44.0 buildavx2
 popd
 
 %build
@@ -110,7 +108,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685508079
+export SOURCE_DATE_EPOCH=1688683748
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -304,6 +302,20 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/help/es/geary/shortcuts.page
 /usr/share/help/es/geary/star.page
 /usr/share/help/es/geary/write.page
+/usr/share/help/eu/geary/accounts.page
+/usr/share/help/eu/geary/archive.page
+/usr/share/help/eu/geary/bugs.page
+/usr/share/help/eu/geary/contributing.page
+/usr/share/help/eu/geary/figures/geary.svg
+/usr/share/help/eu/geary/index.page
+/usr/share/help/eu/geary/label.page
+/usr/share/help/eu/geary/limits.page
+/usr/share/help/eu/geary/overview.page
+/usr/share/help/eu/geary/preferences.page
+/usr/share/help/eu/geary/search.page
+/usr/share/help/eu/geary/shortcuts.page
+/usr/share/help/eu/geary/star.page
+/usr/share/help/eu/geary/write.page
 /usr/share/help/fr/geary/accounts.page
 /usr/share/help/fr/geary/archive.page
 /usr/share/help/fr/geary/bugs.page
@@ -433,7 +445,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/geary/libgeary-client-43.0.so
+/V3/usr/lib64/geary/libgeary-client-44.0.so
 /V3/usr/lib64/geary/plugins/desktop-notifications/libdesktop-notifications.so
 /V3/usr/lib64/geary/plugins/email-templates/libemail-templates.so
 /V3/usr/lib64/geary/plugins/folder-highlight/libfolder-highlight.so
@@ -442,7 +454,7 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /V3/usr/lib64/geary/plugins/sent-sound/libsent-sound.so
 /V3/usr/lib64/geary/plugins/special-folders/libspecial-folders.so
 /V3/usr/lib64/geary/web-extensions/libgeary-web-process.so
-/usr/lib64/geary/libgeary-client-43.0.so
+/usr/lib64/geary/libgeary-client-44.0.so
 /usr/lib64/geary/plugins/desktop-notifications/libdesktop-notifications.so
 /usr/lib64/geary/plugins/email-templates/libemail-templates.so
 /usr/lib64/geary/plugins/folder-highlight/libfolder-highlight.so
