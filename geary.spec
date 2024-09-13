@@ -7,7 +7,7 @@
 #
 Name     : geary
 Version  : 46.0
-Release  : 31
+Release  : 32
 URL      : https://download.gnome.org/sources/geary/46/geary-46.0.tar.xz
 Source0  : https://download.gnome.org/sources/geary/46/geary-46.0.tar.xz
 Summary  : No detailed summary available
